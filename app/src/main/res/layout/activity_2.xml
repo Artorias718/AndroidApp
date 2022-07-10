@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_bg"
+    tools:context=".Activity2">
+
+        <TextView
+            android:id="@+id/textView2A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/seabook"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/rubik"
+            android:text="@string/localit"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintStart_toStartOf="@+id/textView2A"
+            app:layout_constraintTop_toBottomOf="@+id/textView2A" />
+
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="347dp"
+            android:layout_height="53dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/search_bg"
+            android:drawableStart="@drawable/ic_search_black_24dp"
+            android:drawablePadding="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:text="@string/scegli_la_destinazione"
+            android:textColor="#62878F"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewA"
+            android:autofillHints="" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="270dp"
+            android:layout_height="144dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="110dp"
+            app:srcCompat="@drawable/stabilimento1"
+            app:layout_constraintStart_toStartOf="@+id/editText2"
+            app:layout_constraintTop_toTopOf="@+id/editText2"/>
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="270dp"
+            android:layout_height="144dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginStart="1dp"
+            app:srcCompat="@drawable/stabilimento2"
+            app:layout_constraintStart_toStartOf="@+id/imageButton"
+            app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+        <ImageButton
+            android:id="@+id/imageButton3"
+            android:layout_width="270dp"
+            android:layout_height="144dp"
+            app:srcCompat="@drawable/stabilimento3"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="180dp"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="563dp"
+            app:layout_constraintStart_toStartOf="@+id/imageButton2"
+            app:layout_constraintTop_toTopOf="@+id/imageButton2"
+            android:contentDescription="TODO" />
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="40dp"
+            android:layout_height="43dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sea_profile"
+            tools:layout_editor_absoluteX="365dp"
+            android:contentDescription="TODO" />
+</androidx.constraintlayout.widget.ConstraintLayout>
