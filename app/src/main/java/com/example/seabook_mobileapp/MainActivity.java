@@ -205,25 +205,22 @@ public class MainActivity extends AppCompatActivity {
 
         Log.e("", "Response from url: " + data);
 
-        SimpleDateFormat sdf3;
-        sdf3 = new SimpleDateFormat("yyyy/MM/dd");
+        String string = data;
+        String[] parts = string.split("/");
+        String part1 = parts[0]; // 004
+        String part2 = parts[1];
+        String part3 = parts[2];
 
-        Date newDate = null;
-        try{
-            newDate = sdf3.parse(data);
+        String parsedString = part3 + "-" + part2 + "-" + part1;
 
-        }catch (Exception e){ e.printStackTrace(); }
+        //Log.e("", "Response from url: " + parsedString);
 
-        Log.e("", "Response from url: " + newDate);
-
-        String URL ="http://192.168.1.100:8080/api/v1/stabilimenti/"+id+"/lista_Posti/" + newDate;
+        String URL ="http://192.168.1.100:8080/api/v1/stabilimenti/"+id+"/lista_Posti/" + parsedString;
 
 
         Log.e("", "Response from url: " + URL);
 
-
-
-            Intent intent;
+        Intent intent;
         intent = new Intent(this,
                 Activity3.class);
         intent.putExtra(EXTRA_TEXT, URL);
