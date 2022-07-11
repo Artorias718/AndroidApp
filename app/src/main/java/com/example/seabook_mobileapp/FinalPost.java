@@ -32,6 +32,7 @@ public class FinalPost extends AppCompatActivity {
     private static final String TAG = "con";
 
     private Button buttonFinalPost;
+    public static final String IP = "192.168.1.16";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,7 +80,7 @@ public class FinalPost extends AppCompatActivity {
 
             String jsonInputString = "{\"name\": " + valueIWantToSend + "}";
 
-            URL url = new URL("http://192.168.1.100:8080/api/v1/stabilimenti/create");
+            URL url = new URL("http://"+IP+":8080/api/v1/stabilimenti/create");
             HttpURLConnection client = (HttpURLConnection) url.openConnection();
             client.setRequestMethod("POST");
             client.setRequestProperty("name",valueIWantToSend);

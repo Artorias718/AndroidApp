@@ -16,6 +16,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.crashlytics.buildtools.api.net.proxy.Constants;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
     Button newbtn;
     public static final String EXTRA_TEXT = "com.example.application.example.EXTRA_TEXT";
     public static final String EXTRA_DATE = "com.example.application.example.EXTRA_TEXT";
+    public static final String IP = "192.168.1.16";
 
-    private final static String URL = "http://192.168.1.100:8080/api/v1/stabilimenti/";
+    private final static String URL = "http://"+IP+":8080/api/v1/stabilimenti/";
     ArrayList<String> tutorialList = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
             HttpHandler sh = new HttpHandler();
 
-            String url = "http://192.168.1.100:8080/api/v1/stabilimenti/";
+            String url = "http://"+IP+":8080/api/v1/stabilimenti/";
 
             String jsonStr = sh.makeServiceCall(url);
             Log.e(TAG, "Response from url: " + jsonStr);
@@ -215,7 +218,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Log.e("", "Response from url: " + parsedString);
 
-        String URL ="http://192.168.1.100:8080/api/v1/stabilimenti/"+id+"/lista_Posti/" + parsedString;
+        String URL ="http://"+IP+":8080/api/v1/stabilimenti/"+id+"/lista_Posti/" + parsedString;
 
 
         Log.e("", "Response from url: " + URL);
